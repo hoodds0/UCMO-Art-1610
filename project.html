@@ -3,48 +3,117 @@
     
 <!-- 
 All of the following CSS statements:
-[ ] - background-image, 
-[ ] - background-color,
-[ ] - font-family, 
-[ ] - font-size, 
-[ ] - font-style, 
-[ ] - font-weight, 
-[ ] - color,
-[ ] - margin, 
-[ ] - padding,
-[ ] - position: 
-[ ] - relative, 
-[ ] - position: 
-[ ] - absolute;
-[ ] - :hover 
+[ ] - background-image 
+[ ] - background-color
+[X] - font-family 
+[ ] - font-size 
+[X] - font-style 
+[X] - font-weight 
+[X] - color
+[X] - margin 
+[X] - padding
+[X] - position: relative 
+[X] - position: absolute
+[X] - :hover 
 
 At least One from each line:
-[ ] - display: flex or display: grid 
+[X] - display: flex or display: grid 
 [ ] - border or border-radius
 
 [ ] - A linked folder of local images
-[ ] - A linked Google Font
+[X] - A linked Google Font
 -->
 
 <head>
+    <style>
+        body {
+            font-family: "Fira Code", 'Roboto', sans-serif;
+            font-optical-sizing: auto;
+            font-weight: normal;
+            font-style: normal;
+            margin: 0;
+            padding: 0;
+        }
+        header>nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+            position: fixed;
+            width: calc(100% - 35px);
+            top: 0;
+            z-index: 1000;
+        }
+        header>nav h1 {
+            color: white;
+            margin: 0;
+        }
+        header>nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0px;
+            padding: 0;
+        }
+        header>nav ul li {
+            position: relative;
+            margin-left: 20px;
+        }
+        header>nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        header>nav ul li a:hover {
+            text-decoration: underline;
+        }
+        header>nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #333;
+            padding: 10px 0;
+            list-style: none;
+            margin: 0;
+        }
+        header>nav ul li:hover ul {
+            display: block;
+        }
+        header>nav ul li ul li {
+            margin: 0;
+        }
+        header>nav ul li ul li a {
+            padding: 10px 20px;
+            display: block;
+            white-space: nowrap;
+        }
+        header>nav ul li ul li a:hover {
+            background-color: #444;
+        }
+        main {
+            margin-top: 60px;
+        }
+    </style>
     <title>Darian Hood - Project 2</title>
     <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
-
 <header>
-    <hgroup>
-        <h1>Darian Hood - Project 1</h1>
-    </hgroup>
     <nav>
+        <h1>Darian Hood - Project 2</h1>
         <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">Projects</a>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li>
+                <a href="#contact">Contacts</a>
                 <ul>
-                    <li><a href="#constitution-quiz">United States Constitution Quiz</a></li>
+                    <li><a href="mailto:dsh72900@ucmo.edu">Email</a></li>
+                    <li><a href="https://github.com/hoodds0" target="_blank">Github</a></li>
                 </ul>
             </li>
-            <li><a href="#contact">Contact Info</a></li>
         </ul>
     </nav>
 </header>
@@ -165,8 +234,6 @@ def load_spritesheet(self, dir):
 
     </section>
 </main>
-
-<hr>
 
 <footer id="footer">
 
