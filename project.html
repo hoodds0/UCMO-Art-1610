@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Darian Hood - Project 1</title>
+    <meta charset="utf-8">
+</head>
+<body>
+
+<header>
+    <hgroup>
+        <h1>Darian Hood - Project 1</h1>
+    </hgroup>
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a>
+                <ul>
+                    <li><a href="#constitution-quiz">United States Constitution Quiz</a></li>
+                </ul>
+            </li>
+            <li><a href="#contact">Contact Info</a></li>
+        </ul>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            
+            My name is Darian and this is a simple website that uses multiple different types of html tags.<br>
+            I have interested in coding for as along as I can remember. I have done some small projects<br>
+            which can be found under <a href="#projects">Projects</a>. I have a <strong>basic understanding</strong> of Python, Java, C#,<br>
+            Lua, and some others I am forgeting about. I spend most of my time either on video games<br>
+            or doing some type of programming. Duing my time on FiveM I have also done some<br>
+            development for it in the way of scripts. FiveM uses C#, Lua, or JavaScript as<br>
+            programming langauges that people can use.<br>
+            <br>
+            I have also started to get into Linux. Linux is not new to me as I have messed with it in the<br>
+            past, to a small about. NixOS is my current latest venture in to the Linux ecosystem. It takes<br>
+            a declarative approach meaning that is not FHS, filesystem hierarchy standard, compliant.<br>
+            QubesOS is another linux distro that I messed around with and I think it is a very unique<br>
+            distro that is only usefully to a small amount of people.
+
+
+            <figure>
+                <q> <em>A boy who is not embraced by the village will burn it down to feel its warmth.</em> </q> - Unknown
+                <figcaption><blockquote>One of my favorite quotes.</blockquote></figcaption>
+            </figure>
+
+            <br>
+            <br>
+
+            <figure>
+                <img src="./media/statefair.jpg" width="184.8" height="400"/>
+                <figcaption>Picture of me at State Fair<br>Community College</figcaption>
+            </figure>
+
+        </p>
+
+        <br>
+    </section>
+
+    <section id="Schedule">
+        <h3>Schedule</h3>
+        <table border=3>
+            <caption>Hours working on work outside school.</caption>
+            <tr><td>Day      <th>Time
+            <tr><td>Sunday   <th><time>1 Hours</time>
+            <tr><td>Monday   <th><time>2 Hours</time>
+            <tr><td>Tuesday  <th><time>2 Hours</time>
+            <tr><td>Wednesday<th><time>2 Hours</time>
+            <tr><td>Thursday <th><time>2 Hours</time>
+            <tr><td>Friday   <th><time>2 Hours</time>
+            <tr><td>Saturday <th><time>1 Hours</time>
+        </table>
+    </section>
+
+    <hr>
+
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <ol>
+            <li id="constitution-quiz"><h3><a href="https://github.com/hoodds0/Constitution-Project">United States Constitution Quiz - Python</a></h3>
+
+                <p>
+                    This is a simple quiz that I made for my Goverment class. It uses Pygame: Community Edition.<br>
+                    It does contain a exe that includes Python and Pygame that allows you to run it easily.
+                </p>
+
+                <br>
+
+                <h4>Image Galley</h4>
+                <span>
+                    <img src="./media/project-constitution-1.png" width="148.8" height="114.2" />
+                    <img src="./media/project-constitution-2.png" width="148.8" height="114.2" />
+                    <img src="./media/project-constitution-3.png" width="148.8" height="114.2" />
+                    <img src="./media/project-constitution-4.png" width="148.8" height="114.2" />
+                </span>
+
+                <br>
+
+                <h4>Code Preview</h4>
+                <pre><code>
+def load_spritesheet(self, dir):
+    """Load Sprite Sheets
+            
+    Arguments:
+        dir -- Folder where Sprite Sheet are
+            
+    Returns:
+        A Dict with a list of (X, Y) Pairs of 10x10 [x][y] for an Image
+    """
+    path = join("ASSETS", dir, "Sheets")
+    images = [f for f in listdir(path) if isfile(join(path, f))]
+    all_sheets = {}
+    for image in images:
+        sheet = pygame.image.load(join(path, image)).convert_alpha()
+        spritesX = []
+        width = sheet.get_width() // 10
+        height = sheet.get_height() // 10
+        for x in range(sheet.get_width() // width):
+            spritesY = []
+            for y in range(sheet.get_height() // height):
+                surface = pygame.Surface((width, height), pygame.SRCALPHA)
+                rect = pygame.Rect(x * width, y * height, width, height)
+                surface.blit(sheet, (0, 0), rect)
+                spritesY.append(surface)
+                spritesX.append(spritesY)
+        all_sheets[image.replace(".png", "")] = spritesX
+    return all_sheets
+                </code></pre>
+
+            </li>
+        </ol>
+
+    </section>
+</main>
+
+<hr>
+
+<footer id="footer">
+
+    <div id="links">
+        <h3 id="contact">Contact Info</h3>
+        <nav>
+            <span><a href="mailto:dsh72900@ucmo.edu"><img src="https://img.icons8.com/?size=100&id=86875&format=png&color=000000" width="40" height="40"/></a></span>
+            <span><a href="https://github.com/hoodds0"><img src="https://img.icons8.com/?size=100&id=106564&format=png&color=000000" width="40" height="40"/></a></span>
+        </nav>
+    </div>
+
+    <br>
+
+    <em>&copy; Darian H. 2025 - UCMO Art 1610</em>
+
+</footer>
+</body>
+</html>
